@@ -48,7 +48,7 @@ var OpenWeatherMap = {
         // UV Index info https://en.wikipedia.org/wiki/Ultraviolet_index
         
         var self = this;
-        var queryUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${ encodeURIComponent( this.apiKey ) }&lat=${ encodeURIComponent( latitude ) }&lon=${ encodeURIComponent( longitude ) }`
+        var queryUrl = `https://api.openweathermap.org/data/2.5/uvi?appid=${ encodeURIComponent( this.apiKey ) }&lat=${ encodeURIComponent( latitude ) }&lon=${ encodeURIComponent( longitude ) }`
 
         $.ajax( {
             url: queryUrl,
@@ -92,7 +92,7 @@ var OpenWeatherMap = {
     transformWeatherResponse: function( response ){
         return {
             coords: response.coord,
-            iconUrl: `http://openweathermap.org/img/w/${ response.weather[0].icon }.png`,
+            iconUrl: `https://openweathermap.org/img/w/${ response.weather[0].icon }.png`,
             description: response.weather[0].description,
             temperature: this.kelvinToCelsius( response.main.temp ).toFixed( 2 ) + " °C",
             humidity: response.main.humidity.toFixed( 2 ) + " %",
@@ -111,7 +111,7 @@ var OpenWeatherMap = {
      */
     getCurrentWeather: function( cityName, callback ){
         var self = this;
-        var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent( cityName ) + "&appid=" + encodeURIComponent( this.apiKey ) + "&lang=" + encodeURIComponent( this.language );
+        var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent( cityName ) + "&appid=" + encodeURIComponent( this.apiKey ) + "&lang=" + encodeURIComponent( this.language );
 
         $.ajax( {
             url: queryUrl,
@@ -140,7 +140,7 @@ var OpenWeatherMap = {
      */
     getWeatherForecast: function( cityName, callback ){
         var self = this;
-        var queryUrl = `http://api.openweathermap.org/data/2.5/forecast?appid=${ encodeURIComponent( this.apiKey ) }&q=${ encodeURIComponent( cityName ) }`
+        var queryUrl = `https://api.openweathermap.org/data/2.5/forecast?appid=${ encodeURIComponent( this.apiKey ) }&q=${ encodeURIComponent( cityName ) }`
 
         $.ajax( {
             url: queryUrl,
