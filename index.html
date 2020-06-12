@@ -16,83 +16,51 @@
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Always expand</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarsExample02">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
-          </div>
+          <a class="navbar-brand" href="#">Weather Station</a>
         </div>
       </nav>
       <section class="pt-2 pb-0">
-        <div class="container-fluid m-0 ">
+        <div class="container-fluid m-0">
           <div class="row d-md-flex-row  overflow-hidden">
             <div class="col-md-5  p-0 col-12 bg-light d-flex overflow-hidden ">
               <div class="card p-0   w-100 h-100 text-light   border-0 ">
-                <img class="card-img h-100 w-100" src="https://drive.google.com/uc?export=view&id=1w04I-c_eS_XDfzBEnGQxSMnA2sWrwVbd"
-                  alt="Card image">
-                <div class="card-img-overlay p-1 p-md-3    ">
-                  <div class="position-relative  w-100 h-25  d-flex">
+                <img class="w-100 h-100" style="position:absolute; top: 0; bottom: 0; left: 0; right: 0; object-fit: cover;" src="https://drive.google.com/uc?export=view&id=1w04I-c_eS_XDfzBEnGQxSMnA2sWrwVbd" alt="Card image">
+                <div class="p-1 p-md-3">
+                  <div class="position-relative d-flex">
                     <div class="container-fluid align-self-start   mt-2 mb-2">
                       <div class="row">
-                        <div class="col-5 col-md-6">
-                          <form class="form-inline justify-content-sm-center my-2 my-md-0">
-                            <input class="form-control" type="text" placeholder="Search" id="city-name">
-                            <button type="button" class="btn btn-dark"><i class="fas fa-search" id="search-button"></i></button>
-                          </form>
-                          <h4 class="mt-1">My recent cities</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position-relative  w-100 h-50  d-flex">
-                    <div class="container-fluid align-self-center   mt-5 mb-2">
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="col-md-12">
-                            <div class="card shadow flex-md-row mb-4 box-shadow h-md-250">
-                              <div class="card-body d-flex flex-column align-items-start">
-                                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                                <h3 class="mb-0">
-                                  <a class="text-dark" href="#">Featured post</a>
-                                </h3>
-                                <div class="mb-1 text-muted">Nov 12</div>
-                                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#">Continue reading</a>
+                        <div class="col text-dark">
+                          <form class="form-inline my-2 my-md-0">
+                            <div class="input-group">
+                              <input class="form-control" type="text" placeholder="Search" id="city-name">
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-dark"><i class="fas fa-search" id="search-button"></i></button>
                               </div>
-                              <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" src="http://via.placeholder.com/200x250/ccc/efefef" data-holder-rendered="true" style="width: 200px; height: 250px;">
+                            </div>
+                          </form>
+                          <h4 class="my-3">My recent cities</h4>
+                          <div id="recent-cities">
+                            <!-- ANCHOR: CITIES GO HERE -->
+                            <div class="card shadow flex-md-row mb-4 box-shadow h-md-250">
+                              <div class="card-body bg-white p-0">
+                                <div class="row">
+                                  <div class="col-8 pr-0">
+                                    <div class="p-3">
+                                      <h3 class="mb-0">
+                                        <a class="text-dark" href="#">CITY_NAME</a>
+                                      </h3>
+                                      <div class="mb-1">Temperature: CURRENT_TEMP</div>
+                                      <div class="mb-1">Humidity: CURRENT_HUMIDITY</div>
+                                      <div class="mb-1">Wind Speed: CURRENT_HUMIDITY</div>
+                                    </div>
+                                  </div>
+                                  <div class="col-4 pl-0">
+                                    <img class="w-100 h-100" style="object-fit: cover;" src="http://via.placeholder.com/200x250/ccc/efefef">
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position-relative  w-100  h-25 d-flex">
-                    <div class="container-fluid align-self-end  mt-5 mb-2">
-                      <div class="row">
-                        <div class="col-md-6 col-7">
-                          <div class=" pt-0 d-inline-block">
-                            <a href="#" role="button" class=" btn btn-link mr-2">
-                              <i class="fab fa-twitter fa-lg text-light" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class=" btn btn-link mr-2">
-                              <i class="fab fa-facebook fa-lg text-light" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class=" btn btn-link mr-2">
-                              <i class="fab fa-linkedin fa-lg text-light" aria-hidden="true"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-6 col-5 text-right">
-                          <a href="#" class="btn btn-outline-light">Hire me now</a>
                         </div>
                       </div>
                     </div>
@@ -281,58 +249,6 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="">
-        <footer class="pt-5 pb-5  bg-dark text-white">
-          <div class="container">
-            <div class="row align-items-top text-center text-md-left">
-              <div class="col-12 col-sm-6 col-md-4">
-                <h3><strong>Country A</strong></h3>
-                <p>Street Address
-                  <br>Contact Name</p>
-                <p>+44 800 400 0000</p>
-                <p>
-                  <a href="#">infob@bootstraptor.com</a>
-                </p>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0">
-                <h3><strong>Country B</strong></h3>
-                <p>Street Address 100
-                  <br>Contact Name</p>
-                <p>+13 800 312 0000</p>
-                <p>
-                  <a href="#">infob@bootstraptor.com</a>
-                </p>
-              </div>
-              <div class="col-12 col-md-4 mt-5 mt-md-0 text-md-left">
-                <h3><strong>About Us</strong></h3>
-                <p>Bootstraptor provides high quality assets for your business. We help entrepreneurs with great ideas achieving their goals faster.</p>
-                <p class="text-h3">
-                  <a href="#">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                  </a>&nbsp;&nbsp;
-                  <a href="#">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                  </a>&nbsp;&nbsp;
-                  <a href="#">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                  </a>&nbsp;&nbsp;
-                  <a href="#">
-                    <i class="fab fa-pinterest" aria-hidden="true"></i>
-                  </a>&nbsp;&nbsp;
-                  <a href="#">
-                    <i class="fab fa-google" aria-hidden="true"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col text-center">
-                © 2018 Bootstraptor. All Rights Reserved
-              </div>
-            </div>
-          </div>
-        </footer>
       </section>
       <!-- jQuery is required -->
       <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
