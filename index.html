@@ -9,30 +9,30 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!--TODO: CREATE REPOSITORY FOR FAVICON-->
-      <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/solar/bootstrap.min.css ">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
       <!-- Plugins -->
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Weather Station</a>
         </div>
       </nav>
-      <section class="pt-2 pb-0">
+      <section class="py-0">
         <div class="container-fluid m-0">
           <div class="row d-md-flex-row  overflow-hidden">
-            <div class="col-md-5  p-0 col-12 bg-light d-flex overflow-hidden ">
+            <div class="col-md-3  p-0 col-12 bg-dark text-white d-flex overflow-hidden ">
               <div class="card p-0   w-100 h-100 text-light   border-0 ">
-                <img class="w-100 h-100" style="position:absolute; top: 0; bottom: 0; left: 0; right: 0; object-fit: cover;" src="https://drive.google.com/uc?export=view&id=1w04I-c_eS_XDfzBEnGQxSMnA2sWrwVbd" alt="Card image">
+                <img class="w-100 h-100" style="position:absolute;  object-position: left; filter: brightness(70%); top: 0; bottom: 0; left: 0; right: 0; object-fit: cover;" src="images/background.jpg">
                 <div class="p-1 p-md-3">
                   <div class="position-relative d-flex">
-                    <div class="container-fluid align-self-start   mt-2 mb-2">
+                    <div class="container-fluid align-self-start mt-2 mb-2">
                       <div class="row">
-                        <div class="col text-dark">
+                        <div class="col text-white">
                           <form class="form-inline my-2 my-md-0">
                             <div class="input-group">
-                              <input class="form-control" type="text" placeholder="Search" id="city-name">
+                              <input class="form-control bg-white text-dark" type="text" placeholder="Search" id="city-name">
                               <div class="input-group-append">
                                 <button type="button" class="btn btn-dark"><i class="fas fa-search" id="search-button"></i></button>
                               </div>
@@ -40,26 +40,7 @@
                           </form>
                           <h4 class="my-3">My recent cities</h4>
                           <div id="recent-cities">
-                            <!-- ANCHOR: CITIES GO HERE -->
-                            <div class="card shadow flex-md-row mb-4 box-shadow h-md-250">
-                              <div class="card-body bg-white p-0">
-                                <div class="row">
-                                  <div class="col-8 pr-0">
-                                    <div class="p-3">
-                                      <h3 class="mb-0">
-                                        <a class="text-dark" href="#">CITY_NAME</a>
-                                      </h3>
-                                      <div class="mb-1">Temperature: CURRENT_TEMP</div>
-                                      <div class="mb-1">Humidity: CURRENT_HUMIDITY</div>
-                                      <div class="mb-1">Wind Speed: CURRENT_HUMIDITY</div>
-                                    </div>
-                                  </div>
-                                  <div class="col-4 pl-0">
-                                    <img class="w-100 h-100" style="object-fit: cover;" src="http://via.placeholder.com/200x250/ccc/efefef">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            <!-- ANCHOR: SAVED SEARCH CITIES GO HERE -->
                           </div>
                         </div>
                       </div>
@@ -68,178 +49,76 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-7  pb-5 overflow-hidden bg-light">
+            <div class="col-md-9 pb-3 overflow-hidden bg-dark">
               <div class="container-fluid p-md-1 d-flex align-items-center h-100">
-                <div class="row justify-content-center align-items-center h-100">
-                  <div class="col-md-12  pt-5 pt-md-1 pb-5 overflow-hidden bg-light">
-                    <div class="container  ">
-                      <div class="row   justify-content-center align-content-center   d-flex  ">
-                        <div class="col-md-6 col-12 mx-auto">
-                          <h2 class="mb-3 mt-3" id="location-name"></h2>
-                          <p class="text-h3 lead">Temperature:&nbsp;<span id="temperature"></span></p>
-                          <p class="text-h3 lead">Humidity:&nbsp;<span id="humidity"></span></p>
-                          <p class="text-h3 lead">Wind Speed:&nbsp;<span id="wind-speed"></span></p>
-                          <p class="text-h3 lead">Min Temperature:&nbsp;<span id="temp_min"></span></p>
-                          <p class="text-h3 lead">Max Temperature:&nbsp;<span id="temp_max"></span></p>
-                          <h4 class="mb-3 mt-3">Weather for today</h4>
-                          <div class="progress mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 60%">
-                              <span class="stacked-label">HTML</span>
-                            </div>
-                          </div>
-                          <div class="progress mb-3 mt-2">
-                            <div class="progress-bar " role="progressbar" style="width: 70%">
-                              <span class="stacked-label">CSS</span>
-                            </div>
-                          </div>
-                          <div class="progress mb-3 mt-2">
-                            <div class="progress-bar " role="progressbar" style="width: 80%">
-                              <span class="stacked-label">JavaScript</span>
-                            </div>
-                          </div>
-                          <div class="progress mb-3 mt-2">
-                            <div class="progress-bar " role="progressbar" style="width: 70%">
-                              <span class="stacked-label">PHP</span>
-                            </div>
-                          </div>
-                          <p class="text-h3 mt-5 mb-5">
-                            <a class="btn btn-outline-dark" href="http://bootstraptor.com">Learn More</a>
-                          </p>
+                <div id="forecasts" style="visibility: hidden; width: 100%; margin: auto;" class="row justify-content-center align-items-center h-100">
+                  <div class="col-md-12 pt-5 pt-md-1 pb-5 overflow-hidden">
+                    <div class="mt-4">
+                      <div class="row">
+                        <div class="col">
+                          <h3 class="mb-4 text-white">Current Forecast</h3>
                         </div>
-                        <div class="col-md-3 col-6 mx-auto">
-                          <div class="card">
-                            <img class="card-img-top shadow" src="http://via.placeholder.com/350x350/007bff/ffffff" alt="Profile">
+                      </div>
+                      <div class="row justify-content-center align-content-center d-flex">
+                        <div class="col-11 mx-auto mt-3">
+                          <div class="card border-0 bg-white">
                             <div class="card-body text-center">
-                              <h4 class="card-title">John Doe</h4>
-                              <p class="card-text text-muted">UI/UX Designer</p>
-                              <a href="#" class="social twitter m-2">
-                                <i class="fab fa-twitter"></i>
-                              </a>
-                              <a href="#" class="social facebook m-2">
-                                <i class="fab fa-facebook"></i>
-                              </a>
-                              <a href="#" class="social google-plus m-2">
-                                <i class="fab fa-google-plus"></i>
-                              </a>
-                              <a href="#" class="social linkedin m-2">
-                                <i class="fab fa-linkedin"></i>
-                              </a>
-                              <p class="mt-4">
-                                <a href="#" class="btn btn-outline-primary">Contact me!</a>
-                              </p>
+                              <h4 id="location-name" class="card-title text-dark">CITY_NAME</h4>
+                              <div class="card-text">
+                                <p class="text-h3 lead mb-3"><span id="date">DATE</span></p>
+                                <img id="icon" class="d-block mb-1 mx-auto" src="http://via.placeholder.com/60x60/007bff/ffffff" alt="">
+                                <p class="text-h3 lead mb-3"><span id="description">Rainy</span></p>
+                                <p class="text-h3 lead"><strong>T:</strong> <span id="temperature">25º</span></p>
+                                <p class="text-h3 lead"><strong>H:</strong> <span id="humidity">30%</span></p>
+                                <p class="text-h3 lead"><strong>WS:</strong> <span id="wind-speed">10Kmph</span></p>
+                                <p class="text-h3 lead"><strong>Min T:</strong> <span id="temp_min">17º</span></p>
+                                <p class="text-h3 lead"><strong>Max T:</strong> <span id="temp_max">30º</span></p>
+                                <p class="text-h3 lead"><strong>UV Index:</strong> <span id="uv-color" style="display: inline-block; vertical-align: text-bottom; background: red; width: 20px; height: 20px;" ></span> <span id="uv-index">10</span> <span id="uv-risk">High</span> </p>
+                              </div>
                             </div>
+                            <img id="location-image" class="card-img-top shadow" src="http://via.placeholder.com/350x350/007bff/ffffff" alt="Profile">
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-12  pt-5 pt-md-1 pb-5 overflow-hidden bg-light">
-                    <div class="container">
-                      <div class="row text-center">
+                  <div class="col-md-12 pt-4 overflow-hidden">
+                    <div class="">
+                      <div class="row">
                         <div class="col">
-                          <h3 class="  mb-4">Weekly Forecast</h3>
+                          <h3 class="mb-4 text-white">Weekly Forecast</h3>
                         </div>
                       </div>
-                      <div class="row text-center mt-md-5">
-                        <div class="col-md-2 mb-5 col-12">
-                          <img alt="image" class="img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
-                          <h3><strong>Day 1</strong></h3>
-                          <p>Position</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                          <div class="mb-1 mt-2 mr-3 align-self-center pt-3 d-block">
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-twitter fa-md text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-facebook fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-linkedin fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-google-plus fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                      <div class="row text-center mx-auto mt-5">
+                        <div id="day-1" class="text-white offset-md-1 col-md-2 col-12">
+                          <h3><strong class="weekday">DAY</strong></h3>
+                          <div class="temperature">T: 25ºC</div>
+                          <div class="humidity">H: 30%</div>
+                          <img alt="image" class="icon img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
                         </div>
-                        <div class="col-md-2 mb-5 col-12">
-                          <img alt="image" class="img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
-                          <h3><strong>Day 2</strong></h3>
-                          <p>Position</p>
-                          <p>He packed him seven versalia, put his initial into the belt and made himself on the way.</p>
-                          <div class="mb-1 mt-2 mr-3 align-self-center pt-3 d-block">
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-twitter fa-md text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-facebook fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-linkedin fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-google-plus fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                        <div id="day-2" class="text-white col-md-2 col-12">
+                          <h3><strong class="weekday">DAY</strong></h3>
+                          <div class="temperature">T: 25ºC</div>
+                          <div class="humidity">H: 30%</div>
+                          <img alt="image" class="icon img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
                         </div>
-                        <div class="col-md-2 mb-5 col-12">
-                          <img alt="image" class="img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
-                          <h3><strong>Day 3</strong></h3>
-                          <p>Position</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                          <div class="mb-1 mt-2 mr-3 align-self-center pt-3 d-block">
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-twitter fa-md text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-facebook fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-linkedin fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-google-plus fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                        <div id="day-3" class="text-white col-md-2 col-12">
+                          <h3><strong class="weekday">DATE</strong></h3>
+                          <div class="temperature">T: 25ºC</div>
+                          <div class="humidity">H: 30%</div>
+                          <img alt="image" class="icon img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
                         </div>
-                        <div class="col-md-2 mb-5 col-12">
-                          <img alt="image" class="img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
-                          <h3><strong>Day 4</strong></h3>
-                          <p>Position</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                          <div class="mb-1 mt-2 mr-3 align-self-center pt-3 d-block">
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-twitter fa-md text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-facebook fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-linkedin fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-google-plus fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                        <div id="day-4" class="text-white col-md-2 col-12">
+                          <h3><strong class="weekday">DAY</strong></h3>
+                          <div class="temperature">T: 25ºC</div>
+                          <div class="humidity">H: 30%</div>
+                          <img alt="image" class="icon img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                          <img alt="image" class="img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
-                          <h3><strong>Day 5</strong></h3>
-                          <p>Position</p>
-                          <p>He packed him seven versalia, put his initial into the belt and made himself on the way.</p>
-                          <div class="mb-1 mt-2 mr-3 align-self-center pt-3 d-block">
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-twitter fa-md text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-facebook fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-linkedin fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" role="button" class="  p-1 m-2">
-                              <i class="fab fa-google-plus fa-md  text-primary" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                        <div id="day-5" class="text-white col-md-2 col-12">
+                          <h3><strong class="weekday">DAY</strong></h3>
+                          <div class="temperature">T: 25ºC</div>
+                          <div class="humidity">H: 30%</div>
+                          <img alt="image" class="icon img-fluid mb-4 mt-3 rounded shadow" src="http://via.placeholder.com/250x250/007bff/ffffff">
                         </div>
                       </div>
                     </div>
@@ -254,7 +133,14 @@
       <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+
+      <!-- SECTION Handlebars 4.7.6 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+      <!-- !SECTION Handlebars 4.7.6 -->
+
       <!-- Scripts -->
+      <script src="js/open-weather-map.js"></script>
+      <script src="js/unsplash-source.js"></script>
       <script src="js/script.js"></script>
     </body>
 </html>
